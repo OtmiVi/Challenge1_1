@@ -22,13 +22,15 @@ namespace Challenge_1_1
             if (file1.Exists && file2.Exists)
             {
                 string text = File.ReadAllText(path1);
-                int i = text.Length;
-                string convers=null;
-                for (i -= 1; i >= 0; i--)
+                int n = text.Length-1;
+                char [] chars = text.ToCharArray();
+                int i , j;
+                for (i = 0,j = n; j > n/2; i++,j--)
                 {
-                     convers+= text[i];
+                    (chars[i], chars[j]) = (chars[j], chars[i]);
                 }
-                File.WriteAllText(path2,convers);
+                text = String.Concat<char>(chars) ;
+                File.WriteAllText(path2,text);
             }
             else
             {
