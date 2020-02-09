@@ -11,6 +11,7 @@ namespace Challenge_1_1
     {
         static void Main(string[] args)
         {
+            Console.WriteLine();
             string path1 = @"" + Console.ReadLine();
             string path2 = @"" + Console.ReadLine();
             FileInfo file1 = new FileInfo(path1);
