@@ -17,7 +17,7 @@ namespace Challenge_1_1
             string path2 = @"" + Console.ReadLine();
             FileInfo file1 = new FileInfo(path1);
             FileInfo file2 = new FileInfo(path1);
-
+            //test
             
             if (file1.Exists && file2.Exists)
             {
